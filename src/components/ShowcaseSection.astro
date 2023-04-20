@@ -1,0 +1,27 @@
+---
+import BikeCard from './BikeCard.astro';
+
+import { bikes as bikesData } from '../../db.json'
+import { convertValueToReal } from '../utils/convertValueToReal';
+
+const bikes = bikesData.map((bike) => ({
+  ...bike,
+  price: convertValueToReal(bike.price)
+}))
+---
+
+<section class="container grid grid-cols-1 lg:grid-cols-3 gap-8 py-28">
+  <h2 class="col-span-1 lg:col-span-3 text-5xl font-semibold lowercase mb-2">
+    Escolha a sua<span class="text-yellow-500">.</span>
+  </h2>
+
+  {bikes.map((item) => (
+    <a href={`/bicicletas/${item.slug}`} class="group">
+      <BikeCard
+        image={item.image}
+        name={item.name}
+        price={item.price}
+      />
+    </a>
+  ))}
+</section>

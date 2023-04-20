@@ -1,0 +1,68 @@
+---
+import technologyImg from '../assets/images/fotos/tecnologia.jpg'
+
+import electricBikeIcon from '../assets/icons/eletrica.svg'
+import trackerIcon from '../assets/icons/rastreador.svg'
+---
+
+<section class="bg-neutral-900 xl:shadow-[inset_0_80px_#FFF,inset_0_-80px_#FFF]">
+  <div class="container grid grid-cols-1 xl:grid-cols-2 gap-6 xl:gap-8">
+    <div class="py-12 xl:py-36">
+      <span class="text-neutral-400 text-lg font-semibold uppercase mb-6 block">
+        Tecnologia Avançada
+      </span>
+      <h2 class="text-neutral-50 text-5xl font-semibold lowercase mb-4">
+        Voce escolhe as suas cores e componentes<span class="text-yellow-500">.</span>
+      </h2>
+      <p class="text-neutral-400 text-lg mb-6">
+        Cada Bikcraft é única e possui sua identidade. As medidas serão exatas para o seu corpo e altura, garantindo maior conforto e ergonomia na sua pedalada. Você pode também personalizar completamente as suas cores.
+      </p>
+      <a href="/bicicletas" class="inline-flex items-center justify-center text-lg text-yellow-500 font-semibold uppercase underline underline-offset-4 transition-colors hover:text-neutral-50">
+        Escolha um modelo
+      </a>
+
+      <div class="flex flex-col sm:flex-row gap-8 mt-14 ">
+        <div>
+          <img
+            src={electricBikeIcon}
+            alt=""
+            width={24}
+            height={24}
+            class="mb-2"
+          />
+          <strong class="text-neutral-50 text-lg font-normal mb-1 block">
+            Motor Elétrico
+          </strong>
+          <p class="text-neutral-400">
+            Toda Bikcraft é equipada com um motor elétrico que possui duração de até 120h. A bateria é recarregada com a sua energia gasta ao pedalar.
+          </p>
+        </div>
+
+        <div>
+          <img
+            src={trackerIcon}
+            alt=""
+            width={24}
+            height={24}
+            class="mb-2"
+          />
+          <strong class="text-neutral-50 text-lg font-normal mb-1 block">
+            Rastreador
+          </strong>
+          <p class="text-neutral-400">
+            Sabemos o quão preciosa é sua Bikcraft, por isso adicionamos rastreadores e sistemas anti-furto para garantir o seu sossego.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hidden xl:block">
+      <img
+        src={technologyImg}
+        alt=""
+        loading="lazy"
+        class="w-full h-full object-cover object-left rounded"
+      />
+    </div>
+  </div>
+</section>

@@ -1,0 +1,97 @@
+{
+  "bikes": [
+    {
+      "slug": "nimbus-stark",
+      "image": "../src/assets/images/bicicletas/nimbus.jpg",
+      "name": "Nimbus Stark",
+      "description": "A Nimbus Stark é a melhor Bikcraft já criada pela nossa equipe. Ela vem equipada com os melhores acessórios, o que garante maior velocidade.",
+      "price": 4999,
+      "weight": "9kg",
+      "height": "60cm",
+      "width": "120cm",
+      "depth": "10cm",
+      "gears": 16,
+      "wheel": "29",
+      "technologies": [
+        {
+          "icon": "../src/assets/icons/eletrica.svg",
+          "label": "Motor Elétrico"
+        },
+        {
+          "icon": "../src/assets/icons/carbono.svg",
+          "label": "Fibra de Carbono"
+        },
+        {
+          "icon": "../src/assets/icons/velocidade.svg",
+          "label": "40km/h"
+        },
+        {
+          "icon": "../src/assets/icons/rastreador.svg",
+          "label": "Rastreador"
+        }
+      ]
+    },
+    {
+      "slug": "magic-might",
+      "image": "../src/assets/images/bicicletas/magic.jpg",
+      "name": "Magic Might",
+      "description": "A Magic Might é a melhor Bikcraft já criada pela nossa equipe. Ela vem equipada com os melhores acessórios, o que garante maior velocidade.",
+      "price": 9999,
+      "weight": "9kg",
+      "height": "60cm",
+      "width": "120cm",
+      "depth": "10cm",
+      "gears": 16,
+      "wheel": "29",
+      "technologies": [
+        {
+          "icon": "../src/assets/icons/eletrica.svg",
+          "label": "Motor Elétrico"
+        },
+        {
+          "icon": "../src/assets/icons/carbono.svg",
+          "label": "Fibra de Carbono"
+        },
+        {
+          "icon": "../src/assets/icons/velocidade.svg",
+          "label": "40km/h"
+        },
+        {
+          "icon": "../src/assets/icons/rastreador.svg",
+          "label": "Rastreador"
+        }
+      ]
+    },
+    {
+      "slug": "nebula-cosmic",
+      "image": "../src/assets/images/bicicletas/nebula.jpg",
+      "name": "Nebula Cosmic",
+      "description": "A Nebula é a melhor Bikcraft já criada pela nossa equipe. Ela vem equipada com os melhores acessórios, o que garante maior velocidade.",
+      "price": 2999,
+      "weight": "9kg",
+      "height": "60cm",
+      "width": "120cm",
+      "depth": "10cm",
+      "gears": 16,
+      "wheel": "29",
+      "technologies": [
+        {
+          "icon": "../src/assets/icons/eletrica.svg",
+          "label": "Motor Elétrico"
+        },
+        {
+          "icon": "../src/assets/icons/carbono.svg",
+          "label": "Fibra de Carbono"
+        },
+        {
+          "icon": "../src/assets/icons/velocidade.svg",
+          "label": "40km/h"
+        },
+        {
+          "icon": "../src/assets/icons/rastreador.svg",
+          "label": "Rastreador"
+        }
+      ]
+    }
+  ]
+}

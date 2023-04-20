@@ -1,0 +1,119 @@
+---
+import Layout from '../../layouts/Layout.astro'
+
+import Headline from '../../components/Headline.astro'
+
+import { bikes } from '../../../db.json'
+import { convertValueToReal } from '../../utils/convertValueToReal'
+
+import deliveryIcon from '../../assets/icons/entrega.svg'
+import stockIcon from '../../assets/icons/estoque.svg'
+
+export function getStaticPaths() {
+  return [
+    { params: { slug: 'nimbus-stark' } },
+    { params: { slug: 'magic-might' } },
+    { params: { slug: 'nebula-cosmic' } }
+  ]
+}
+
+const { slug } = Astro.params
+
+const bike = bikes.find((bike) => bike.slug === slug)
+
+if(!bike){
+  return  Astro.redirect('/404')
+}
+---
+
+<Layout
+	title={`Bikcraft | ${bike.name}`}
+	description={bike.name}
+>
+  <Headline
+    title={bike.name}
+    highlightText={convertValueToReal(bike.price)}
+  />
+  <section class="bg-neutral-900">
+    <div class="container grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8 items-start">
+      <div class="xl:col-span-2 grid grid-cols-2 gap-4">
+        <img
+          src={bike.image}
+          alt={bike.name}
+          class="col-span-full object-cover"
+        />
+        <img
+          src={bike.image}
+          alt={bike.name}
+          class="object-cover"
+        />
+        <img
+          src={bike.image}
+          alt={bike.name}
+          class="object-cover"
+        />
+      </div>
+
+      <div>
+        <p class="text-neutral-400 mb-8">
+          {bike.description}
+        </p>
+
+        <div class="flex flex-col sm:flex-row sm:items-center gap-4">
+          <a href="/" class="button">
+            Comprar agora
+          </a>
+
+          <div class="flex flex-col gap-1 text-neutral-400 text-sm place-items-start">
+            <span class="flex items-center gap-1 bg-neutral-950 py-1 px-2 rounded">
+              <img src={deliveryIcon} alt="" />
+              entrega em 5 dias
+            </span>
+            <span class="flex items-center gap-1 bg-neutral-950 py-1 px-2 rounded">
+              <img src={stockIcon} alt="" />
+              18 em estoque
+            </span>
+          </div>
+        </div>
+
+        <h2 class="text-neutral-400 text-sm font-semibold tracking-wide uppercase mt-8 mb-3">
+          Informações
+        </h2>
+
+        <ul class="flex flex-col gap-2 text-neutral-50">
+          {bike.technologies.map((item) => (
+            <li class="flex items-center gap-2">
+              <img src={item.icon} alt="" width={24} height={24} />
+              {item.label}
+            </li>
+          ))}
+        </ul>
+
+        <h2 class="text-neutral-400 text-sm font-semibold tracking-wide uppercase mt-8 mb-3">
+          Ficha Técnica
+        </h2>
+
+        <ul class="flex flex-col gap-2 bg-neutral-950 text-neutral-400 p-6 rounded-md">
+          <li class="flex gap-2 justify-between border-b-[1px] border-neutral-800 pb-2">
+            Peso <span>{bike.weight}</span>
+          </li>
+          <li class="flex gap-2 justify-between border-b-[1px] border-neutral-800 pb-2">
+            Altura <span>{bike.height}</span>
+          </li>
+          <li class="flex gap-2 justify-between border-b-[1px] border-neutral-800 pb-2">
+            Largura <span>{bike.width}</span>
+          </li>
+          <li class="flex gap-2 justify-between border-b-[1px] border-neutral-800 pb-2">
+            Profundidade <span>{bike.depth}</span>
+          </li>
+          <li class="flex gap-2 justify-between border-b-[1px] border-neutral-800 pb-2">
+            Marchas <span>{bike.gears}</span>
+          </li>
+          <li class="flex gap-2 justify-between">
+            Roda <span>{bike.wheel}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</Layout>

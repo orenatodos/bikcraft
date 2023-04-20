@@ -1,0 +1,73 @@
+---
+import bikcraftLogoImg from '../assets/images/bikcraft.svg'
+
+import instagramIcon from '../assets/icons/instagram.svg'
+import facebookIcon from '../assets/icons/facebook.svg'
+import YouTubeIcon from '../assets/icons/youtube.svg'
+
+const currentYear = new Date().getFullYear()
+---
+
+<footer class="bg-neutral-950 pb-10 pt-12 sm:pt-16">
+  <div class="container grid sm:grid-cols-[3fr_5fr_4fr] gap-8">
+    <img src={bikcraftLogoImg} alt="Bikcraft" />
+
+    <div>
+      <h3 class="text-neutral-50 uppercase mb-6">Contato</h3>
+
+      <ul class="text-neutral-400 flex flex-col gap-4 mb-6">
+        <li>
+          <a href="tel:+552199999999">+55 21 9999-9999</a>
+        </li>
+        <li>
+          <a href="mailto:contato@bikcraft.com">
+            contato@bikcraft.com
+          </a>
+        </li>
+        <li>Rua Ali Perto, 42 - Botafogo</li>
+        <li>Rio de Janeiro - RJ</li>
+      </ul>
+
+      <ul class="flex items-center gap-6">
+        <li>
+          <a href="/">
+            <img src={instagramIcon} alt="Instagram" />
+          </a>
+        </li>
+        <li>
+          <a href="/">
+            <img src={facebookIcon} alt="Facebook" />
+          </a>
+        </li>
+        <li>
+          <a href="/">
+            <img src={YouTubeIcon} alt="YouTube" />
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <nav>
+      <h3 class="text-neutral-50 uppercase mb-6">Informações</h3>
+
+      <ul class="text-neutral-400 flex flex-col gap-4">
+        <li>
+          <a href="/bicicletas">Bicicletas</a>
+        </li>
+        <li>
+          <a href="/seguros">Seguros</a>
+        </li>
+        <li>
+          <a href="/contato">Contato</a>
+        </li>
+        <li>
+          <a href="/termos">Termos e Condições</a>
+        </li>
+      </ul>
+    </nav>
+
+    <p class="text-neutral-400 col-span-full">
+      Bikcraft {currentYear} &copy; Alguns direitos reservados.
+    </p>
+  </div>
+</footer>

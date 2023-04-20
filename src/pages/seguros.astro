@@ -1,0 +1,23 @@
+---
+import Layout from '../layouts/Layout.astro'
+
+import Headline from '../components/Headline.astro'
+import InsuranceSection from '../components/InsuranceSection.astro'
+import PerksSection from '../components/PerksSection.astro';
+import FaqSection from '../components/FaqSection.astro';
+---
+
+<Layout
+	title="Seguros | Bikcraft"
+	description="Bicicletas elétricas de alta precisão e qualidade, feitas sob medica para o cliente. Explore o mundo na sua velocidade com a Bikcraft."
+>
+	<main>
+    <Headline
+      title="Você seguro"
+      highlightText="Escolha o seguro"
+    />
+    <InsuranceSection />
+    <PerksSection />
+    <FaqSection />
+	</main>
+</Layout>

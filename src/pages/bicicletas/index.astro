@@ -1,0 +1,54 @@
+---
+import Layout from '../../layouts/Layout.astro'
+
+import Headline from '../../components/Headline.astro'
+
+import { bikes } from '../../../db.json'
+---
+
+<Layout
+	title="Bicicletas | Bikcraft"
+	description="Bicicletas"
+>
+	<main>
+		<Headline
+      title="Escolha a melhor para você"
+      highlightText="Nossas Bicicletas"
+    />
+
+    {bikes.map((bike) => (
+      <div class="group odd:bg-neutral-900 md:odd:bg-gradient-to-r from-white from-30% to-neutral-900 to-0% py-16">
+        <div class="container grid md:grid-cols-2 items-center gap-8">
+          <div class="relative">
+            <img src={bike.image} alt="Bicicleta Preta" class="rounded" />
+            <span class="absolute top-4 right-0 py-1 px-2 bg-neutral-950 text-neutral-50 text-sm">
+              {bike.price}
+            </span>
+          </div>
+          <div>
+            <h2 class="text-3xl text-neutral-950 group-odd:text-neutral-50 font-semibold mb-4 relative before:bg-yellow-500 before:h-2 before:w-3 before:block before:mb-1">
+              {bike.name}
+            </h2>
+            <p class="text-neutral-500 mb-6 group-odd:text-neutral-400">
+              {bike.description}
+            </p>
+            <div class="flex gap-6">
+              <ul class="flex-1 flex flex-col gap-2 text-neutral-950 group-odd:text-neutral-400">
+                {bike.technologies.map((item) => (
+                  <li class="flex items-center gap-2">
+                    <img src={item.icon} alt="" width={24} height={24} />
+                    {item.label}
+                  </li>
+                ))}
+              </ul>
+
+              <a href="/" class="button self-end">
+                Mais sobre
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    ))}
+	</main>
+</Layout>

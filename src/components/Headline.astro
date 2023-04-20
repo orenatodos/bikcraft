@@ -1,0 +1,19 @@
+---
+export type Props = {
+  title: string
+  highlightText: string
+}
+
+const { title, highlightText } = Astro.props
+---
+
+<section class="bg-neutral-900 py-16">
+  <div class="container">
+    <p class="text-neutral-400 mb-1 lowercase lg:font-semibold lg:text-lg lg:uppercase">
+      {highlightText}
+    </p>
+    <h1 class="font-bold text-neutral-50 text-5xl lowercase">
+      {title}<span class="text-yellow-500">.</span>
+    </h1>
+  </div>
+</section>

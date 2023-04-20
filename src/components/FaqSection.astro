@@ -1,0 +1,51 @@
+---
+const commonQuestions = [
+  {
+    id: "1",
+    question: 'Qual forma de pagamento vocês aceitam?',
+    answer: 'Aceitamos cartões de crédito com as bandeiras: Visa, Mastercard, ELO e American Express. Para pagamentos à vista aceitamos PIX e Boleto através do PagSeguro.'
+  },
+  {
+    id: "2",
+    question: 'Como posso entrar em contato?',
+    answer: 'Aceitamos pagamentos parcelados em todos os cartões de crédito. Para pagamentos à vista também aceitamos PIX e Boleto através de PagSeguro.'
+  },
+  {
+    id: "3",
+    question: 'Vocês possuem algum desconto?',
+    answer: 'Aceitamos pagamentos parcelados em todos os cartões de crédito. Para pagamentos à vista também aceitamos PIX e Boleto através de PagSeguro.'
+  },
+  {
+    id: "4",
+    question: 'Qual a garantia que possuo?',
+    answer: 'Aceitamos pagamentos parcelados em todos os cartões de crédito. Para pagamentos à vista também aceitamos PIX e Boleto através de PagSeguro.'
+  },
+  {
+    id: "5",
+    question: 'Posso parcelar no boleto?',
+    answer: 'Aceitamos pagamentos parcelados em todos os cartões de crédito. Para pagamentos à vista também aceitamos PIX e Boleto através de PagSeguro.'
+  },
+  {
+    id: "6",
+    question: 'Quantas trocas posso fazer ao ano?',
+    answer: 'Aceitamos pagamentos parcelados em todos os cartões de crédito. Para pagamentos à vista também aceitamos PIX e Boleto através de PagSeguro.'
+  },
+]
+---
+
+<section class="py-16">
+  <div class="container">
+    <h2 class="col-span-full text-neutral-950 text-5xl font-semibold lowercase mb-16">
+      Perguntas frequentes<span class="text-yellow-500">.</span>
+    </h2>
+
+    {commonQuestions.map((item) => (
+      <details class="even:bg-neutral-100 rounded-md max-w-3xl">
+        <summary class="font-semibold text-neutral-950 cursor-pointer flex items-center gap-2 before:block before:h-[6px] before:w-3 before:bg-yellow-500 p-6">
+          {item.question}
+        </summary>
+        <p class="ml-5 p-6 pt-0 text-neutral-500">{item.answer}</p>
+      </details>
+    ))}
+  </div>
+</section>

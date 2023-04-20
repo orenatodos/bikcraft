@@ -1,0 +1,65 @@
+---
+export type Props = {
+  title?: string
+}
+
+const { title } = Astro.props
+---
+
+<section class="py-14 xl:py-16 bg-neutral-900">
+  <div class="container grid xl:grid-cols-2 items-center gap-8 xl:gap-16">
+    {!!title && (
+      <h2 class="xl:col-span-2 text-neutral-50 text-5xl font-semibold lowercase mb-16">
+        Seguros<span class="text-yellow-500">.</span>
+      </h2>
+    )}
+
+    <div class="bg-neutral-950 p-8 flex flex-col gap-8">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-neutral-400 text-4xl uppercase">
+          Prata
+        </h3>
+        <span class="font-semibold text-4xl text-neutral-50">
+          R$ 199
+          <span class="text-xs text-neutral-400 block text-right">mensal</span>
+        </span>
+      </div>
+
+      <ul class="text-lg text-neutral-50 flex flex-col gap-4">
+        <li>Duas trocas por ano</li>
+        <li>Assistência técnica</li>
+        <li>Suporte 08h às 18h</li>
+        <li>Cobertura estadual</li>
+      </ul>
+
+      <a href="/orcamento" class="button xl:py-4 xl:px-8 xl:text-lg self-start">
+        Inscreva-se
+      </a>
+    </div>
+
+    <div class="bg-neutral-950 p-8 flex flex-col gap-8">
+      <div class="flex items-center justify-between">
+        <h3 class="font-semibold text-yellow-500 text-4xl uppercase">
+          Ouro
+        </h3>
+        <span class="font-semibold text-4xl text-neutral-50">
+          R$ 299
+          <span class="text-xs text-neutral-400 block text-right">mensal</span>
+        </span>
+      </div>
+
+      <ul class="text-lg text-neutral-50 flex flex-col gap-4">
+        <li>Cinco trocas por ano</li>
+        <li>Assistência especial</li>
+        <li>Suporte 24h</li>
+        <li>Cobertura nacional</li>
+        <li>Desconto em parceiros</li>
+        <li>Acesso ao Clube Bikcraft</li>
+      </ul>
+
+      <a href="/orcamento" class="button xl:py-4 xl:px-8 xl:text-lg self-start">
+        Inscreva-se
+      </a>
+    </div>
+  </div>
+</section>

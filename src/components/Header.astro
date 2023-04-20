@@ -1,0 +1,41 @@
+---
+import bikcraftImg from '../assets/images/bikcraft.svg'
+
+const menuLinks = [
+  {
+    label: 'Bicicletas',
+    path: '/bicicletas'
+  },
+  {
+    label: 'Seguros',
+    path: '/seguros'
+  },
+  {
+    label: 'Contato',
+    path: '/contato'
+  }
+]
+---
+
+<header class="bg-neutral-950 py-5">
+  <div class="container flex items-center justify-between flex-wrap gap-6">
+    <a href="/">
+      <img src={bikcraftImg} alt="Bikcraft">
+    </a>
+
+    <nav>
+      <ul class="flex items-center flex-wrap gap-4 xl:gap-8">
+        {menuLinks.map((link) => (
+          <li>
+            <a
+              href={link.path}
+              class="bg-neutral-800 rounded text-white text-sm inline-block py-3 px-4 active:bg-neutral-700 xl:py-4 xl:px-0 xl:text-xl xl:bg-transparent xl:relative xl:after:block xl:after:h-[2px] xl:after:w-0 xl:after:bg-current xl:after:mt-1 xl:after:absolute xl:after:transition-[width] xl:hover:after:w-full"
+            >
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+</header>
